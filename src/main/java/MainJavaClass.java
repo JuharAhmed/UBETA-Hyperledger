@@ -401,9 +401,10 @@ public class MainJavaClass {
     }
 
 
-//For now, i am creating only Pool Market tasks but we can create any one of the tasks as needed
     // The tasks should be put in the correct sequential order. Start with BiM tasks, then PM tasks, then BAM tasks and finally PS tasks
     //Also set the contractID, methodToInvoke and data during Task object creation
+    // At a time, it is better to run only either write transactions like bidding and market clearnce or read transactions like get balance. 
+    // Otherwise a congestion will be created and the result will be bad
 
     private static ArrayList<Task> addRoundTasks() { //Also set the contractID, methodToInvoke and data during Task object creation
         Task task;
