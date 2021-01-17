@@ -238,10 +238,10 @@ public class MainJavaClass {
             System.out.println("Round " +i+ " Round Duration "+testRound.roundDuration);
         }
 
-        long testDuration= numberOfRounds*(roundDuration +mediumIntervalDelay) +startUpDelay + finishingDelay;// We assume that all rounds have the same duration. This does not work if the rounds have different duration
+        long testDuration= numberOfRounds*(roundDuration +mediumIntervalDelay) ;// We assume that all rounds have the same duration. This does not work if the rounds have different duration
         long testEndTime= testStartTime+testDuration +finishingDelay; //We add finishing delay to give time for any unfinished task
         System.out.println("Test End Time: "+testEndTime);
-        System.out.println("Test Duration: "+testDuration);
+        System.out.println("Test Duration: "+testDuration +finishingDelay);
 
         //Create test schedule consisting of all rounds above
         testSchedule= new TestSchedule(testStartTime,testEndTime,numberOfRounds,testRounds);
